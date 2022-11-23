@@ -1,8 +1,9 @@
 import pandas as pd
 import requests
 from selenium.webdriver.common.by import By
+from selenium import webdriver
 
-response = requests.get("https://free-proxy-list.net/%22)
+response = requests.get("https://free-proxy-list.net/%22")
 
 # List proxys usable
 proxy_list = pd.read_html(response.text)[0]
@@ -57,7 +58,7 @@ for proxy_url in https_proxies["url"]:
     if len(good_proxies) >=5:
         break
 
-from selenium import webdriver
+
 
 # with requests.Session() as s:
 
@@ -95,7 +96,7 @@ for proxy_url in good_proxies:
 
     #  add my account by element using webdriver
 
-    driver.get("https://app.fakejson.com/auth/sessions/new%22)
+    driver.get("https://app.fakejson.com/auth/sessions/new%22", verify=False)
 username =  driver.find_element(By.ID, "session[email]").send_keys(na)
 # username.send_keys(na)
 password = driver.find_element_by_id(By.ID, "session[password]]").send_keys(pa)
